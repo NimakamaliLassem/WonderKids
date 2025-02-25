@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "Merriweather Sans", sans-serif; */
+}
+html, body {
+    margin: 0;
+    height: 100%;
+    background-image: url('background\ screen.jpg');
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center; */
+}
+p {
+    font-family: "Merriweather Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    /* font-size: 16em; */
+    text-align: left;
+    /* position: absolute; */
+}
+
+.Text {
+    padding-left: 156.2483px;
+    padding-top: 793.8222px;
+    width: 870px;
+    text-align: left;
+    font-size: 32px;
+    height: 223.2229px;
+    color: rgb(46, 42, 114);
+}
+
+.Logo{
+    z-index: 1;
+    position: absolute;
+    padding-top: 7.52em;
+    padding-left: 6.59em;
+}
+
+.Calendar {
+    position: absolute;
+    padding-top: 489.0317px;
+    padding-left: 960px;
+    z-index: 2;
+}
+
+.Clock {
+    position: absolute;
+    padding-top: 568.661px;
+    padding-left: 960px;
+    z-index: 2;
+}
+
+.Date{
+    position: absolute;
+    padding-top: 496px;
+    padding-left: 1020px;
+    font-size: 24px;
+    z-index: 2;
+    color: rgb(238, 150, 76);
+}
+
+.Time{
+    position: absolute;
+    padding-top: 576px;
+    padding-left: 1020px;
+    font-size: 24px;
+    z-index: 2;
+    color: rgb(238, 150, 76);
+}
+
+.ButtonSection {
+    padding-top: 20px;
+    padding-left: 1270px;
+    z-index: 2;
+    background: none;
+    border: none;   
+    outline: none;    
+}
+
+.Button{
+    background: none;
+    border: none;   
+    outline: none;    
+    cursor: pointer;
+}
+
+.ButtonText{
+    position: absolute;
+    font-size: 30px;
+    color: rgb(46, 42, 114);
+    padding-left: 97px;
+    top: 890px;
+}
