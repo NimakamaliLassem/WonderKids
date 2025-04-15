@@ -1,2 +1,0 @@
-# WonderKids
-WonderKids Website Draft
