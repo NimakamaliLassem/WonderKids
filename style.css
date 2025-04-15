@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    font-family: "Merriweather Sans", sans-serif;
+    background: #fff;
+    background-image: url("Background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+  }
+ 
+  
+  .modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 99;
+    transition: opacity 0.3s ease;
+  }
+  
+  .modal:target {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .modal-wrapper {
+    position: relative;
+    width: 700px; /* Adjust based on the size of your PNG */
+    height: 500px; /* Adjust based on the size of your PNG */
+  }
+  
+  /* Background image styling */
+  .modal-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-left: -11px;
+    margin-top: -60px;
+    background-image: url('modal_box_bg.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  
+  /* Modal box styling */
+  .modal-box {
+    position: relative;
+    width: 655px;
+    background: #f8ffe5; /* Light yellow-green background */
+    border-radius: 15px;
+    padding-left: 20px;
+    padding: 1rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+    font-family: "Merriweather Sans", sans-serif;
+    z-index: 1;
+    margin: 0 auto;
+  }
+
+  .close {
+    position: absolute;
+    top: -20px;
+    right: 40px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: #d4eef2; 
+    color: #1e2757; 
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+  }
+  
+  .close:hover {
+    background: #c0e6ea;
+  }
+  
+  .university {
+    font-size: 0.9rem;
+    color: #2e2a72;
+  }
+  
+  .panel-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2e2a72; /* Dark blue */
+    margin-top: 0.5rem;
+  }
+  
+  .form-subtitle {
+    color: #ef964d; /* Orange */
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  /* Form input fields */
+  .modal-box input {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 10px;
+    background: #d4eef2; /* Light blue */
+    font-size: 1rem;
+    color: rgb(46, 42, 114);
+  }
+  
+  .form-note {
+    font-size: 0.8rem;
+    color: #2e2a72;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  /* Submit button section */
+  .SubmitSection {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+  }
+  
+  .SubmitSection .Button {
+    position: relative;
+    width: 180px; 
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .SubmitSection .Button img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .SubmitSection .ButtonText {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    font-size: 1.1rem;
+    color: rgb(46, 42, 114);
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  
+  .side-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px; 
+    height: 100%;
+    background-color: rgba(159, 213, 216, 0.65); 
+    z-index: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+  }
+  
+  .side-nav ul {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .side-nav ul li {
+    margin: 1rem 0;
+  }
+  
+  .side-nav ul li a {
+    color: rgb(46, 42, 114);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: block;
+    padding: 2.5rem 0;
+  }
+
+  .main-content {
+    margin-left: 200px; 
+    padding: 1rem;
+  }
+  
+  header {
+    position: relative;
+    padding: 2rem;
+  }
+  
+  .Logo {
+    position: absolute;
+    top: 4em;
+    left: 2em;
+    z-index: 1;
+    width: 850px; 
+  }
+  
+  .Calendar {
+    position: absolute;
+    top: 540px;
+    left: 650px;
+    z-index: 2;
+    width: 50px; 
+  }
+  
+  .Date {
+    position: absolute;
+    top: 550px;
+    left: 720px;
+    font-size: 24px;
+    z-index: 2;
+    color: rgb(238, 150, 76);
+  }
+  
+  .Clock {
+    position: absolute;
+    top: 620px;
+    left: 650px;
+    z-index: 2;
+    width: 50px; 
+  }
+  
+  .Time {
+    position: absolute;
+    top: 630px;
+    left: 720px;
+    font-size: 24px;
+    z-index: 2;
+    color: rgb(238, 150, 76);
+  }
+  
+  .Text {
+    position: absolute;
+    top: 350px; 
+    left: 650px;
+    width: 850px;
+    color: rgb(46, 42, 114);
+    font-size: 32px;
+    line-height: 1.4;
+  }
+  
+  .ButtonSection {
+    position: absolute;
+    top: 620px; 
+    left: 1180px;
+    z-index: 2;
+  }
+  
+  .Button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .Button img {
+    width: 320px; 
+  }
+  
+  .ButtonText {
+    position: absolute;
+    top: 50%; 
+    left: 45%; 
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    color: rgb(46, 42, 114);
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  
+  .participants-section {
+    margin-top: 900px;
+    margin-left: 10%; 
+    padding: 2rem;
+    color: rgb(46, 42, 114);
+  }
+  
+  .participants-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    margin-left: 30%;
+    font-weight: 800;
+    text-align: left;
+  }
+  
+  .participants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2rem;
+  }
+  
+  .participant-card {
+    background-color: rgba(245, 221, 151, 0.8);
+    border-radius: 6px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .participant-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  
+  .participant-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: rgb(46, 42, 114);
+  }
+  
+  .participant-card p {
+    text-align: left;
+    font-size: 0.95rem;
+    color: rgb(46, 42, 114);
+    line-height: 1.4;
+  }
+  
